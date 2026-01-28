@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mir Mustak | Senior Executive Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-midnight: #0f172a;
+      --brand-indigo: #4f46e5;
+      --brand-emerald: #10b981;
+      --brand-azure: #0ea5e9;
+      --brand-rose: #f43f5e;
+      --brand-amber: #f59e0b;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #fcfcfd;
+      color: var(--brand-midnight);
+      -webkit-font-smoothing: antialiased;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #4f46e5 0%, #0ea5e9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gradient-bg-prism {
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.05) 0%, rgba(16, 185, 129, 0.05) 50%, rgba(244, 63, 94, 0.05) 100%);
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .card-colorful {
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+    .card-colorful:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+    }
+    .floating-blob {
+      position: absolute;
+      filter: blur(80px);
+      z-index: -1;
+      opacity: 0.4;
+      border-radius: 50%;
+      animation: pulse-blob 10s infinite alternate;
+    }
+    @keyframes pulse-blob {
+      0% { transform: scale(1) translate(0, 0); }
+      100% { transform: scale(1.2) translate(20px, 20px); }
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 10px;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+<body class="selection:bg-indigo-100 overflow-x-hidden">
+  <div id="root"></div>
+</body>
+</html>
