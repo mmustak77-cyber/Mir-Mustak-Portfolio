@@ -23,7 +23,8 @@ import {
   Star,
   Layers,
   PieChart as PieIcon,
-  MousePointer2
+  MousePointer2,
+  Quote
 } from 'lucide-react';
 import { 
   BarChart, 
@@ -42,7 +43,8 @@ import {
   EDUCATION, 
   CERTIFICATIONS, 
   STAT_CARDS,
-  COUNTRIES
+  COUNTRIES,
+  PROFESSIONAL_SUMMARY
 } from './constants';
 
 const App: React.FC = () => {
@@ -91,7 +93,7 @@ const App: React.FC = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-1">
-            {['About', 'Experience', 'Expertise', 'Education'].map((item) => (
+            {['About', 'Summary', 'Experience', 'Expertise', 'Education'].map((item) => (
               <a 
                 key={item}
                 href={`#${item.toLowerCase()}`} 
@@ -115,7 +117,7 @@ const App: React.FC = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden glass-nav border-b border-slate-100 py-8 px-6 space-y-6 shadow-2xl animate-in fade-in slide-in-from-top duration-300">
-            {['About', 'Experience', 'Expertise', 'Education', 'Contact'].map((item) => (
+            {['About', 'Summary', 'Experience', 'Expertise', 'Education', 'Contact'].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setIsMenuOpen(false)} className="block text-2xl font-black text-slate-900 hover:text-indigo-600 tracking-tighter">
                 {item}
               </a>
@@ -187,21 +189,42 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      {/* Professional Summary Section */}
+      <section id="summary" className="py-24 px-6 lg:px-12 bg-gradient-to-br from-indigo-50 via-white to-emerald-50 overflow-hidden relative">
+        <div className="absolute top-0 right-0 p-20 opacity-5 pointer-events-none">
+          <Quote size={200} className="text-indigo-600" />
+        </div>
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="flex flex-col items-center text-center space-y-8">
+            <div className="inline-flex items-center gap-2 text-indigo-600 font-black uppercase tracking-[0.4em] text-[10px]">
+              <div className="w-10 h-px bg-indigo-600"></div>
+              Professional Statement
+              <div className="w-10 h-px bg-indigo-600"></div>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+              Executive <span className="text-indigo-600">Summary</span>
+            </h2>
+            <div className="relative p-10 lg:p-16 bg-white rounded-[3rem] shadow-2xl shadow-indigo-100/50 border border-indigo-50 group">
+              <div className="absolute -top-6 -left-6 w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:rotate-12 transition-transform">
+                <Quote size={24} fill="white" />
+              </div>
+              <p className="text-xl lg:text-2xl text-slate-600 leading-relaxed font-medium italic">
+                {PROFESSIONAL_SUMMARY}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Statistics Section (Vibrant Grid) */}
       <section className="bg-slate-50/50 py-32 border-y border-slate-100 px-6 lg:px-12 relative">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {STAT_CARDS.map((stat, i) => {
-              const colors = [
-                'bg-indigo-600 shadow-indigo-100 text-white',
-                'bg-white text-emerald-600 border-emerald-100',
-                'bg-white text-azure-600 border-azure-100',
-                'bg-white text-rose-600 border-rose-100'
-              ];
               const isDark = i === 0;
               return (
                 <div key={i} className={`p-10 rounded-[2.5rem] border ${isDark ? 'bg-slate-900 border-slate-900 shadow-2xl shadow-slate-200' : 'bg-white border-slate-100 shadow-sm'} card-colorful flex flex-col items-center text-center space-y-5`}>
-                  <div className={`w-14 h-14 ${isDark ? 'bg-white/10 text-white' : 'bg-slate-50 text-slate-900'} flex items-center justify-center rounded-2xl`}>
+                  <div className={`w-14 h-14 ${isDark ? 'bg-indigo-600 text-white shadow-xl shadow-indigo-900/40' : 'bg-slate-50 text-slate-900'} flex items-center justify-center rounded-2xl`}>
                     {stat.icon}
                   </div>
                   <div>

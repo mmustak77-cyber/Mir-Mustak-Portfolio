@@ -12,6 +12,8 @@ import {
 } from 'lucide-react';
 import { Experience, Skill, Education, Certification } from './types';
 
+export const PROFESSIONAL_SUMMARY = "Dynamic and results-oriented Senior Professional with over 24 years of extensive experience in Procurement, Project Management, and Operational Excellence. Proven track record in leading multi-million dollar projects, securing significant government incentives, and delivering substantial cost savings through strategic negotiation and vendor optimization. Expert in end-to-end supply chain management, compliance (BIS, BEE), and cross-border operations across India, Singapore, UK, Bangladesh, and Nepal. Adept at steering high-scale manufacturing setups and driving business growth through data-driven decision-making and strong leadership.";
+
 export const EXPERIENCES: Experience[] = [
   {
     company: "Veira Electronics Pvt Ltd",
@@ -134,9 +136,9 @@ export const CERTIFICATIONS: Certification[] = [
 ];
 
 export const STAT_CARDS = [
-  { label: 'Years Experience', value: '24+', icon: <Briefcase className="w-6 h-6 text-blue-600" /> },
-  { label: 'Dealers Managed', value: '150+', icon: <Users className="w-6 h-6 text-indigo-600" /> },
-  { label: 'Countries Worked/Trained', value: '5+', icon: <Globe className="w-6 h-6 text-emerald-600" /> },
+  { label: 'Years Experience', value: '24+', icon: <Briefcase className="w-6 h-6 text-white" /> },
+  { label: 'Dealers Managed', value: '150+', icon: <Users className="w-6 h-6 text-emerald-600" /> },
+  { label: 'Countries Worked/Trained', value: '5+', icon: <Globe className="w-6 h-6 text-azure-600" /> },
   { label: 'Savings Driven', value: 'Rs. 2.27Cr+', icon: <TrendingDown className="w-6 h-6 text-rose-600" /> },
 ];
 
